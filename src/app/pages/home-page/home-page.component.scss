@@ -1,0 +1,16 @@
+@import '../../../styles/main-colors';
+
+.page {
+    margin: 80px;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    color: $platinum;
+    background-color: $rich-black;
+
+    &:hover {
+        background-color: $indian-red;
+    }
+}
