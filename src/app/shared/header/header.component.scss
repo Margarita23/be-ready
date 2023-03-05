@@ -2,6 +2,11 @@
     font-family: 'Climate Crisis', cursive;
     font-size: xx-large;
     margin: 0 0 0 40px;
+
+    .custom {
+        display: inline;
+        color: #b76d68ff;
+    }
 }
 
 .header {
@@ -13,6 +18,7 @@
     align-items: center;
     position: fixed;
     top: 0;
+    z-index: 100;
 }
 
 .menu {

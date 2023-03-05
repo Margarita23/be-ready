@@ -1,3 +1,29 @@
 <div class="wrapper">
-    <p>script works!</p>
+    <button class="start-quest" (click)="startQuest()">Start Quest</button>
+
+    <div class="quest">
+        <div class="picture">
+            <img src="" alt="">
+
+            <div class="text">{{ activeStep.text }}</div>
+            <div class="choose-wrapper" *ngIf="this.stepsSystem.activeStep == 0">
+                <div class="variant variant-1" (click)="goToStep(2)">I'd rather get the keys and go open the door to the house :)</div>
+                <div class="variant variant-2" (click)="goToStep(1)">I will carefully inspect the area from a distance for unknown or suspicious objects.</div>
+            </div>
+            <div class="choose-wrapper" *ngIf="this.stepsSystem.activeStep == 1">
+                <div class="variant variant-1" (click)="goToStep(5)">WOW! Someone left a toy. I'll go pick it up, maybe someone is looking for a teddy bear.</div>
+                <div class="variant variant-2" (click)="goToStep(6)">It is better to move to a safe distance and call 101.</div>
+            </div>
+            <div class="choose-wrapper" *ngIf="this.stepsSystem.activeStep == 2">
+                <div class="variant variant-1" (click)="goToStep(5)">What luck! I just need the money! I'll go check it out (counting on the money inside)</div>
+                <div class="variant variant-2" (click)="goToStep(6)">It is better to move to a safe distance and call 101.</div>
+            </div>
+            <div class="choose-wrapper" *ngIf="this.stepsSystem.activeStep == 5">
+                <div class="over">Unfortunately, you are out of luck...</div>
+            </div>
+            <div class="choose-wrapper" *ngIf="this.stepsSystem.activeStep == 6">
+                <div class="finish">You did everything right!</div>
+            </div>
+        </div>
+    </div>
 </div>
